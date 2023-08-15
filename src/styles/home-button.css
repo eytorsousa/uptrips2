@@ -1,0 +1,110 @@
+:root {
+    --main-green: #15847b;
+    --second-green: #80c3c9;
+    --dark: #02111B;
+    --light-dark: #3F4045;
+    --light-brown: #FECDAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#home-button {
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    margin-right: 20px;
+    background-color: var(--second-green);
+    opacity: 0.8;
+    box-shadow: 1px 1px 9px var(--dark);
+    border: none;
+    border-radius: 100%;
+    transition: all 150ms ease-in-out;
+}
+
+#home-button:hover {
+    opacity: 1;
+}
+
+#home-button a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-button lord-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.fbk, .zap, .ig {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    #redes { 
+        display: none;
+    }
+
+    .fbk, .zap, .ig {
+        display: inline-block;
+    }
+
+    .rede {
+        width: 49px;
+        height: 49px;
+        z-index: 999;
+        position: fixed;
+        left: 3%;
+        bottom: 5%;
+        margin-right: 20px;
+        background-color: var(--second-green);
+        box-shadow: 1px 1px 9px var(--dark);
+        border: none;
+        border-radius: 100%;
+        transition: all 250ms ease-in-out;
+    }
+
+    .rede img {
+        width: 140px;
+        transform: translateY(-15px);
+    }
+
+    .fbk {
+        bottom: 21%;
+        left: 3%;
+        margin: 0;
+    }
+
+    .ig { 
+        bottom: 13%
+    }
+
+    .fbk:hover, .zap:hover, .ig:hover {
+        background-color: var(--second-green);
+        transform: scale(1.05);
+    }
+
+}
+
+@media (max-width: 768px){
+    .rede {
+        width: 38px;
+        height: 38px;
+    }
+
+    .rede img {
+        width: 100px;
+        height: auto;
+        transform: translateY(-9px);
+    }
+}

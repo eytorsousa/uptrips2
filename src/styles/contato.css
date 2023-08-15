@@ -1,0 +1,186 @@
+:root {
+    --main-green: #15847b;
+    --second-green: #80c3c9;
+    --dark: #02111B;
+    --light-dark: #3F4045;
+    --light-brown: #FECDAA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    width: 100%;
+}
+
+main h1 {
+    font-size: 44px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#ci {
+    width: 100%;
+    display: flex;
+}
+
+#cards {
+    max-width: 850px;
+    width: 55%;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: auto;
+}
+
+.card {
+    width: 270px;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    border: solid 1px #d2d2d2;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1076px) {
+    .card {
+        width: 250px;
+        height: 280px;
+    }
+}
+
+.card img {
+    width: 80px;
+    margin: 20px auto;
+}
+
+.card h4 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card span {
+    margin: 10px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card a {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#img {
+    width: 45%;
+    margin-top: 50px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#img img {
+    width: 100%;
+    margin-right: 30px;
+}
+
+#text {
+    margin: 50px 30px;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 1023px) {
+    #img {
+        display: none;
+    }
+
+    #ci {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cards {
+        width: 80%;
+    }
+
+    #cards, #img {
+        margin: 50px 0;
+    }
+
+    #text {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 36px;
+    }
+
+    #cards {
+        width: 90%;
+        gap: 30px;
+    }
+
+    .card {
+        width: 210px;
+        padding: 15px;
+    }
+
+    .card h4 {
+        font-size: 20px;
+    }
+
+    #text {
+        width: 90%;
+        font-size: 20px;
+        text-align: justify;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 510px) {
+    main h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 250px;
+        padding-bottom: 25px;
+    }
+}

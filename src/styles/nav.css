@@ -1,0 +1,104 @@
+:root {
+    --main-green: #15847b;
+    --second-green: #80c3c9;
+    --dark: #02111B;
+    --light-dark: #3F4045;
+    --light-brown: #FECDAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--second-green);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#pages {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.page {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 4px var(--dark);
+    position: relative;
+    z-index: 2;
+}
+
+.page a::before {
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: var(--main-green);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 400ms ease-in-out;
+}
+
+.page a:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    #pages {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        height: 0px;
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+    }
+
+    .change {
+        height: 70px;
+    }
+
+    #pages {
+        width: 100%;
+    }
+    
+    .page a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+    .page a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .page a {
+        font-size: 14px;
+    }
+}

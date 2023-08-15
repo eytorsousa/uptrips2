@@ -1,0 +1,536 @@
+:root {
+    --main-green: #15847b;
+    --second-green: #80c3c9;
+    --dark: #02111B;
+    --light-dark: #3F4045;
+    --light-brown: #FECDAA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+main h1, #embarques h1 {
+    width: fit-content;
+    align-self: center;
+    font-size: 34px;
+    font-weight: 700;
+    text-shadow: 0px 0px 3px var(--light-dark);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.card {
+    margin: 40px 0px;
+    background-color: #fafafa;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px var(--dark);
+    width: 95%;
+    height: 600px;
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 3px 9px var(--dark);
+}
+
+.img-card {
+    width: 40%;
+    height: 65%;
+    align-self: center;
+    margin: 0px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img-card img.imgp {
+    width: 100%;
+}
+
+.img-card img {
+    width: 130%;
+    border-radius: 6px;
+}
+
+.text-card {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: 700;
+    align-self: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.data {
+    font-size: 22px;
+    font-weight: 500;
+    align-self: center;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+}
+
+.info ul {
+    list-style-type: none;
+    width: fit-content;
+    height: 220px;
+    margin: 50px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    width: fit-content;
+}
+
+.info li::before {
+    content: '';
+    position: absolute;
+    background-image: url(../imgs/icons/verificado.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    transform: translate(-35px, -9px);
+}
+
+.price {
+    margin: auto auto 0px auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 300px;
+    width: 400px;
+    font-size: 28px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.real {
+    font-size: 54px;
+    font-weight: 800;
+    color: #008000;
+    text-shadow: 3px 3px 0px #90ee90;
+}
+
+.taxas {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.buy {
+    width: 100%;
+    display: flex;
+    margin: 30px 0px auto 0px;
+}
+
+.embarque {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.embarque h4 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.embarque ul {
+    margin-left: 40px;
+    list-style-type: none;
+    position: relative;
+}
+
+.embarque li {
+    margin-top: 15px;
+}
+
+.embarque li::before {
+    content: '';
+    position: absolute;
+    background-image: url(../imgs/icons/location.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    transform: translate(-30px, 0px);
+}
+
+.embarque li a {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.comprar {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comprar button {
+    width: 260px;
+    height: 80%;
+    display: flex;
+    border: none;
+    box-shadow: 0px 0px 8px #008000;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+}
+
+.comprar button a {
+    position: relative;
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #008000;
+    text-shadow: 0px 0px 5px rgba(88, 87, 87, 0.5);
+    background-color: #90ee90;
+    transition: all 300ms ease-in-out;
+}
+
+.comprar button:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.6);
+}
+
+.comprar button:hover a {
+    color: white;
+    text-shadow: 0px 0px 6px black;
+    background-color: #2BB741;
+}
+
+button img {
+    width: 45px;
+    z-index: 2;
+}
+
+#embarques {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-embarque {
+    width: 60%;
+    height: 550px;
+    background-color: #fafafa;
+    border: solid 1px #d5d5d5;
+    box-shadow: 0px 0px 6px var(--dark);
+    border-radius: 6px;
+}
+
+.card-embarque h2 {
+    font-size: 26px;
+    text-shadow: 0px 0px 3px var(--dark);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.as, .asl {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 20px;
+}
+
+.as img, .asl img {
+    width: 35px;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    padding: 5px;
+    transition: all 150ms ease-in-out;
+}
+
+.as img:hover, .asl img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.map {
+    margin: 20px auto 0px;
+    width: 90%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: solid 1px #d5d5d5;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 1023px) {
+    .card {
+        width: 85%;
+        position: relative;
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+
+    .text-card {
+        width: 100%;
+    }
+
+    .img-card {
+        position: absolute;
+        width: fit-content;
+        height: 300px;
+        transform: translateY(150px);
+    }
+
+    .img-card img {
+        width: 100%;
+        max-height: 800px;
+    }
+
+    .info {
+        margin-top: 400px;
+        width: 95%;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .info ul {
+        margin: 0;
+        width: 380px;
+        height: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        align-self: center;
+        gap: 20px;
+    }
+
+    .info li {
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .real {
+        font-size: 46px;
+    }
+
+    .taxas {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 0;
+    }
+
+    .buy {
+        flex-direction: column-reverse;
+        margin: 0;
+        height: 240px;
+        gap: 50px;
+        transform: translateY(-30px);
+    }
+
+    .comprar {
+        height: 100px;
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .embarque {
+        width: 300px;
+    }
+
+    #embarques {
+        margin-top: 50px;
+    }
+
+    #embarques h1 {
+        margin-top: 50px;
+    }
+
+    .card-embarque {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .title {
+        font-size: 26px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .data {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .img-card {
+        transform: translateY(155px);
+    }
+
+    .info ul {
+        width: 290px;
+    }
+
+    .info li {
+        font-size: 16px;
+    }
+
+    .info li::before {
+        content: '';
+        position: absolute;
+        background-image: url(../imgs/icons/verificado.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        transform: translate(-29px, -7px);
+    }
+
+    .card-embarque {
+        width: 90%;
+    }
+}
+
+@media (max-width: 470px){
+    .price {
+        width: 260px;
+        transform: translateY(-50px);
+    }
+    
+    .info ul{
+        transform: translate(10px, -50px);
+    }
+
+    .buy {
+        transform: translateY(-70px);
+    }
+
+    .card-embarque {
+        width: 95%;
+    }
+}
+
+@media (max-width: 390px){
+    .price {
+        width: 230px;
+        transform: translateY(-80px);
+    }
+
+    .info ul {
+        width: 230px;
+        transform: translate(10px, -80px);
+    }
+    
+    .info li {
+        font-size: 12px;
+    }
+
+    .buy {
+        gap: 40px;
+        transform: translateY(-90px);
+    }
+
+    .comprar {
+        width: 95%;
+        height: 220px;
+    }
+
+    .embarque {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .embarque ul {
+        width: fit-content;
+    }
+
+    .embarque li {
+        margin-right: 0;
+    }
+
+    .card-embarque h2 {
+        font-size: 22px;
+    }
+
+    .card-embarque .as, .card-embarque .asl{
+        font-size: 14px;
+    }
+
+    .map {
+        height: 300px;
+    }
+
+}
