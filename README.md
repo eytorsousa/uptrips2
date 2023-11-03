@@ -5,7 +5,7 @@ Este site é uma versão anterior da que foi ao ar, mas é uma versão atualizad
 
 Deste modo, o site atual (você pode conferir a partir do link abaixo) possui grandes correções e simplificações do código.
 
-Confira o resultado do projeto aqui: <a href="https://eytorlima.github.io/uptrips2/" target="_blank">Up Trips</a> 🔗.
+Confira o resultado do projeto aqui: <a href="https://eytorsousa.github.io/uptrips2/" target="_blank">Up Trips</a> 🔗.
 
 <hr>
 <strong>Tecnologias:</strong>
